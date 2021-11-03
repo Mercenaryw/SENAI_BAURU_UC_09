@@ -1,0 +1,136 @@
+/* Mudando a fonte de todos os itens do html */
+/* Importando fonts externas */
+@import url('https://fonts.googleapis.com/css2?family=Sonsie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    font-family: 'Sonsie One', cursive;
+ /* font-family: 'Roboto', sans-serif; */
+}
+body{
+    background-color: lightblue;
+}
+/*Iniciando o estilo do header do documento*/
+header img{
+    width: 100px;
+}
+/* Menu mobile */
+#mobile-menu{
+    /* float: right; */
+    margin-top: 15px;
+    display: none;
+}
+#mobile-menu img{
+    width: 50px;
+}
+/* Ajustando o menu */
+header nav{
+    float: right;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+header nav ul li{
+    font-weight: bold;
+}
+/* Itens do Banner / Novidades */
+#banner, #novidades{
+    background-color: #3CD1DB;
+    padding: 50px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    margin-top: 20px;
+}
+#banner img, #novidades img{
+    /* width: 450px; */
+    width: 30%;
+}
+#banner div, #novidades div{
+    margin-top: 20px;
+    width: 600px;
+}
+/* Itens do destaque */
+
+
+/* Minhas classes css */
+.texto-centralizado{
+    text-align: center;
+}
+/* ------------------------------------------------------------------ */
+/* Agrupamento dos cards */
+.grupo-cards{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+/* Classe card */
+.livraria-card{
+    width: 260px;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(200, 162, 235); 
+}
+/* .livraria-card img{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+} */
+.livraria-card div{
+    padding: 10px;  
+}
+.livro_img{
+    height: 350px;
+    text-align: center;
+}
+.livro_img img{
+    height: 100%;
+    border-radius: 5px;
+}
+.texto-novidades{
+    text-align: left;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Ajuste no bootstrap */
+.carousel-item{
+    height: 80vh;
+}.carousel-item img{
+    height: 100%;
+}
+.carousel-caption{
+    background-color: rgba(192, 192, 192, 0.657);
+    border-radius: 20px;
+}
+/* Deixando os indicadores do carousel arredondados */
+.carousel-indicators [data-bs-target]{
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.carousel-control-next, .carousel-control-prev{
+    width: 50px;
+    height: 50px;
+    border-radius: 25%;
+    background-color: white;
+    margin-top: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.carousel-control-next-icon{
+    background-image: url("../image/arrow_forward.svg");
+}
+.carousel-control-prev-icon{
+    background-image: url("../image/arrow_back.svg");
+}
