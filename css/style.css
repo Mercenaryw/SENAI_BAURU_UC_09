@@ -9,22 +9,18 @@
 body{
     background-color: lightblue;
 }
-/*Iniciando o estilo do header do documento*/
-header img{
-    width: 100px;
-}
 /* Menu mobile */
 #mobile-menu{
-    /* float: right; */
+    float: right;
     margin-top: 15px;
-    display: none;
 }
 #mobile-menu img{
     width: 50px;
 }
 /* Ajustando o menu */
 header nav{
-    float: right;
+    /* float: right; */
+    display: none;
 }
 header nav ul{
     list-style: none;
@@ -36,25 +32,104 @@ header nav ul{
 header nav ul li{
     font-weight: bold;
 }
-/* Itens do Banner / Novidades */
+
 #banner, #novidades{
     background-color: #3CD1DB;
-    padding: 50px;
+    padding: 10px;
     color: white;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    column-gap: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 #banner img, #novidades img{
-    /* width: 450px; */
-    width: 30%;
+    width: 90vw;
 }
 #banner div, #novidades div{
-    margin-top: 20px;
-    width: 600px;
+    margin-top: 10px;
+    width: 90vw;
 }
+/* Footer */
+footer{
+    background-color: #3CD1DB;
+    display: grid;
+    grid-template-areas:
+    'enderecos1 enderecos3'
+    'enderecos2 midias-sociais';
+    padding: 10px;
+}
+#logotipo-rodape{
+    display: none;
+    grid-area: imagem-logo;
+}
+.enderecos-rodape1{
+    grid-area: enderecos1;
+    font-size: small;
+}
+.enderecos-rodape2{
+    grid-area: enderecos2;
+    font-size: small;
+}
+.enderecos-rodape3{
+    grid-area: enderecos3;
+    font-size: small;
+}
+#midias-sociais{
+    grid-area: midias-sociais;
+}
+#midias-sociais img{
+    height: 40px;
+}
+#menu-rodape{
+    display: none;
+    grid-area: menu-rodape;
+}
+#menu-rodape ul{
+    list-style: none;
+}
+#menu-rodape ul li{
+    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width:720px){
+    #mobile-menu{
+     display: none;   
+    }
+    header nav{
+       display: block;
+       float: right; 
+       margin-top: 20px;
+       margin-right: 20px;
+    }
+    #banner, #novidades{
+        padding: 50px;
+        column-gap: 50px;
+        margin-top: 20px;
+    }
+    #banner img, #novidades img{
+        width: 450px;
+    }
+    #banner div, #novidades div{
+        margin-top: 20px;
+        width: 600px;
+    }
+    footer{
+        grid-template-areas:
+        'imagem-logo enderecos1 midias-sociais'
+        'imagem-logo enderecos2 menu-rodape'
+        'imagem-logo enderecos3 menu-rodape';
+        padding: 20px;
+    }
+    #logotipo-rodape{
+        display: block;
+    }
+    #menu-rodape{
+        display: block;
+    }
+}
+/* Itens do Banner / Novidades */
+
 /* Itens do destaque */
 
 
@@ -93,6 +168,10 @@ header nav ul li{
 .livro_img img{
     height: 100%;
     border-radius: 5px;
+}
+.img-logo{
+   width: 100px; 
+   margin: 10px;
 }
 .texto-novidades{
     text-align: left;
@@ -134,3 +213,8 @@ header nav ul li{
 .carousel-control-prev-icon{
     background-image: url("../image/arrow_back.svg");
 }
+#galeria{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Footer*/
